@@ -1,0 +1,17 @@
+type: pump
+name: Copper Manual Pump
+description: Early Pump But 4 Mechanical Pump is Better
+size: 2
+solid: false
+health: 300
+attribute: water
+result: water
+researchCostMultiplier: 1.5
+requirements: [
+  copper/60
+  lead/35
+]
+pumpAmount: 0.08
+liquidCapacity: 20
+category: liquid
+research: copper-pipe

@@ -1,0 +1,50 @@
+generator: SerpuloPlanetGenerator
+localizedName: "DryOut"
+parent: sun
+iconColor: ff9421
+orbitRadius: 250
+hasAtmosphere: true
+updateLighting: false
+atmosphereRadIn: 0.02
+atmosphereRadOut: 0.3
+atmosphereColor: ff9900
+drawOrbit: false
+
+accessible: true
+alwaysUnlocked: true
+defaultCore: core-shard
+sectorSeed: 0
+startSector: 1
+sectorSize: 1
+
+clearSectorOnLose: true
+allowSectorInvasion: false
+allowLaunchToNumbered: false
+cloudMesh: {
+  type: HexSkyMesh
+  planet: DryOut
+  seed: 2
+  speed: 3
+  radius: 0.05
+  divisions: 5
+  color: FF890080
+  octaves: 2
+  persistence: 1
+  scl: 2
+  thresh: 0.45
+}
+
+mesh: {
+    type: NoiseMesh
+    planet: DryOut
+    seed: 562697
+    color1: EDC88F
+    color2: D6C299
+    divisions: 5
+    radius: 0.9
+    octaves: 7
+    persistence: 1
+    scl: 0.75
+    mag: 1.2
+}
+//hiddenItems none

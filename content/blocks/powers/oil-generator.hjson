@@ -1,0 +1,71 @@
+type: consumeGenerator
+name: Oil Generator
+description: burning oil to power
+size: 2
+hasLiquids: true
+liquidCapacity: 30
+hasItems: false
+liquidDuration: 150
+powerProduction: 3
+researchCostMultiplier: 1.5
+requirements: [
+  copper/50
+  graphite/35
+  silicon/20
+  lead/75
+]
+research: copper-liquid-tank
+consumes: {
+    liquid: {
+    liquid:oil
+    amount: 0.125
+    }
+}
+category: power
+research: copper-oil-drill
+idleSound: respawning
+idleSoundVolume: 0.5
+
+generateEffectRnd: 0
+generateEffect: {
+    type: MultiEffect
+    effects: [
+        {
+        type:particleEffect
+        particles: 20
+        colorFrom: FFBE0080
+        colorTo: 80001000
+        length: 10
+        lifetime: 30
+        sizeFrom: 5
+        sizeTo: 0.1
+        }
+        {
+        type:particleEffect
+        particles: 30
+        colorFrom: 00000080
+        colorTo: 00000000
+        length: 15
+        lifetime: 40
+        sizeFrom: 1
+        sizeTo: 4
+        }
+    ]
+}
+drawer: {
+    type: drawMulti
+    drawers: [
+    {
+    type: drawDefault
+    }
+    {
+    type:drawGlowRegion
+    suffix: "-light"
+    }
+    {
+    type:drawCrucibleFlame
+    flameColor: FFAE2D
+    midColor: 94000C
+    }
+    ]
+}

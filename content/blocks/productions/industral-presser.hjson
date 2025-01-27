@@ -1,0 +1,93 @@
+type: GenericCrafter
+name: Industral Presser
+description: Compresses coal into graphite Request Oil and Power for Engine and Requrst water for coolant
+health: 320
+size: 4
+hasPower: true
+hasLiquids: true
+liquidCapacity: 15
+hasItems: true
+itemCapacity: 40
+craftTime: 120
+
+researchCostMultiplier: 0.2
+requirements: [
+  copper/180
+  lead/80
+  titanium/90
+  silicon/140
+  graphite/100
+  stranth/60
+]
+consumes: {
+    power: 4
+    items: {
+        items: [
+        coal/8
+        ]
+    }
+    liquids: {
+        liquids: [
+        oil/0.1
+        water/0.25
+        ]
+    }
+}
+outputItems: [
+graphite/16
+]
+category: crafting
+research: multi-press
+idleSound: respawning
+idleSoundVolume: 0.5
+update: true
+
+drawer: {
+    type: drawMulti
+    drawers: [
+    {
+    type: drawDefault
+    }
+    {
+    type:drawGlowRegion
+    suffix: "-glow"
+    color: FFFFFF
+    }
+    ]
+}
+undateEffectChance: 0.3
+updateEffect: {
+    type: particleEffect
+    particles: 20
+    colorFrom: FFFFFF08
+    colorTo: FFFFFF00
+    scaleFrom: 9
+    scaleTo: 0.1
+    lifetime: 60
+    length: 10
+}
+craftEffect: {
+    type: MultiEffect
+    effects: [
+    {
+    type: particleEffect
+    particles: 20
+    colorFrom: FFFFFF30
+    colorTo: FF880000
+    sizeFrom: 2
+    sizeTo: 8
+    lifetime: 60
+    length: 13
+    }
+    {
+    type: particleEffect
+    particle: 20
+    colorFrom: FFFFFF20
+    colorTo: FF880000
+    sizeFrom: 2
+    sizeTo: 10
+    lifetime: 50
+    length: 15
+    }
+]
+}

@@ -1,0 +1,330 @@
+type: ItemTurret
+name: Bucky
+description: Shoot Like a Shotgun, Short Range, Powerful In Close Range
+health: 1200
+size: 2
+targetGround: true
+targetAir: false
+reload: 60
+range: 130
+rotateSpeed: 6.4
+recoil: 3
+researchCostMultiplier: 0.2
+liquidCapacity: 20
+hasLiquid: true
+hasItem: true
+shootSound: shotgun
+consumes: {
+    coolant: {
+    amount: 0.2
+    optional: true
+    }
+}
+shootY: 8
+maxAmmo: 30
+ammoPerShot: 10
+ammoTypes: {
+        copper: {
+        type: BasicBulletType
+        damage: 10
+        speed: 8
+        width: 1
+        height: 10
+        bulletShrink: 0.5
+        frontColor: FFD8AC
+        backColor: FFA87F
+        lifetime: 18
+        knockback: 0.2
+        ammoMultiplier: 1
+        trailColor: FFC37E
+        trailWidth: 2
+        trailLength: 2
+        inaccuracy: 40
+        shootEffect: {
+    lightScl: 1
+    lightOpacity: 0.3
+    length: 0
+    offset: 270
+    cone: 0
+    particles: 1
+    lifetime: 10
+    sizeFrom: 20
+    sizeTo: 0
+    colorTo: FF5B00
+    colorFrom: FFE8C9
+    region: oe-shotgunshootspike
+    }
+        smokeEffect: {
+    type: ParticleEffect
+    particles: 1
+    cone: 30
+    sizeFrom: 0.5
+    sizeTo: 3
+    lifetime: 20
+    colorTo: FFFFFF00
+    colorFrom:FFFFFFCD
+    length: 10
+}
+        }
+        silicon: {
+        type: BasicBulletType
+        damage: 12
+        speed: 6
+        width: 1
+        height: 10
+        bulletShrink: 0.5
+        frontColor: FC6E7C
+        backColor: FFC3BF
+        lifetime: 24
+        knockback: 0.2
+        ammoMultiplier: 1
+        trailColor: FFC3BF
+        trailWidth: 2
+        trailLength: 4
+        homingRange: 100
+        homingPower: 0.18
+        inaccuracy: 80
+        shootEffect: {
+    lightScl: 1
+    lightOpacity: 0.3
+    length: 0
+    offset: 270
+    cone: 0
+    particles: 1
+    lifetime: 10
+    sizeFrom: 20
+    sizeTo: 0
+    colorTo: FF5B00
+    colorFrom: FFE8C9
+    region: oe-shotgunshootspike
+    }
+        smokeEffect: {
+    type: ParticleEffect
+    particles: 1
+    cone: 30
+    sizeFrom: 0.5
+    sizeTo: 3
+    lifetime: 20
+    colorTo: FFFFFF00
+    colorFrom:FFFFFFCD
+    length: 10
+}
+        }
+        titanium: {
+        type: BasicBulletType
+        damage: 7
+        speed: 16
+        width: 5
+        height: 10
+        bulletShrink: 0.5
+        frontColor: 757BFF
+        backColor: 757BFF
+        lifetime: 9
+        knockback: 0.5
+        ammoMultiplier: 3
+        reloadMultiplier: 2.5
+        trailColor: 757BFF
+        trailWidth: 3
+        trailLength: 3
+        inaccuracy: 30
+        pierce: true
+        pierceCap: 5
+        shootEffect: {
+    lightScl: 1
+    lightOpacity: 0.3
+    length: 0
+    offset: 270
+    cone: 0
+    particles: 1
+    lifetime: 10
+    sizeFrom: 20
+    sizeTo: 0
+    colorTo: FFFFFF
+    colorFrom: 757BFF
+    region: oe-shotgunshootspike
+    }
+smokeEffect: {
+    type: ParticleEffect
+    particles: 1
+    cone: 30
+    sizeFrom: 0.5
+    sizeTo: 3
+    lifetime: 20
+    colorTo: FFFFFF00
+    colorFrom:FFFFFFCD
+    length: 10
+}
+        despawnEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            line: true
+            lifetime: 15
+            length: 5
+            baseLength: 15
+            lenFrom: 0
+            lenTo: 3
+            strokeFrom: 1
+            strokeTo: 0
+            colorFrom: 7890FF
+            colorTo: 463EE0
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 7
+            sizeTo: 0
+            lifetime: 10
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorFrom: 7890FF
+            colorTo: 463EE0
+            }
+        ]
+    }
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            line: true
+            lifetime: 15
+            length: 5
+            baseLength: 15
+            lenFrom: 0
+            lenTo: 3
+            strokeFrom: 1
+            strokeTo: 0
+            colorFrom: 7890FF
+            colorTo: 463EE0
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 7
+            sizeTo: 0
+            lifetime: 10
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorFrom: 7890FF
+            colorTo: 463EE0
+            }
+        ]
+    }
+}
+        thorium: {
+        type: BasicBulletType
+        damage: 20
+        speed: 16
+        width: 10
+        height: 15
+        bulletShrink: 0.5
+        frontColor: FF83F9
+        backColor: FF83F9
+        lifetime: 9
+        knockback: 1.5
+        ammoMultiplier: 1
+        reloadMultiplier: 0.8
+        trailColor: FF83F9
+        trailWidth: 3
+        trailLength: 5
+        inaccuracy: 2
+        pierce: false
+        shootEffect: {
+    lightScl: 1
+    lightOpacity: 0.3
+    length: 0
+    offset: 270
+    cone: 0
+    particles: 1
+    lifetime: 10
+    sizeFrom: 20
+    sizeTo: 0
+    colorTo: FFFFFF
+    colorFrom: FF83F9
+    region: oe-shotgunshootspike
+    }
+        smokeEffect: {
+    type: ParticleEffect
+    particles: 1
+    cone: 30
+    sizeFrom: 0.5
+    sizeTo: 3
+    lifetime: 20
+    colorTo: FFFFFF00
+    colorFrom:FFFFFFCD
+    length: 10
+}
+        despawnEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            line: true
+            lifetime: 15
+            length: 5
+            baseLength: 15
+            lenFrom: 0
+            lenTo: 3
+            strokeFrom: 1
+            strokeTo: 0
+            colorFrom: FF83F9
+            colorTo: FFE6FE
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 7
+            sizeTo: 0
+            lifetime: 10
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorFrom: FF83F9
+            colorTo: FFE6FE
+            }
+        ]
+    }
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            line: true
+            lifetime: 15
+            length: 5
+            baseLength: 15
+            lenFrom: 0
+            lenTo: 3
+            strokeFrom: 1
+            strokeTo: 0
+            colorFrom: FF83F9
+            colorTo: FFE6FE
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 7
+            sizeTo: 0
+            lifetime: 10
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorFrom: FF83F9
+            colorTo: FFE6FE
+            }
+        ]
+    }
+}
+}
+shoot: {
+    shots: 8
+    }
+
+requirements: [
+copper/25
+lead/15
+stranth/30
+graphite/20
+]
+category: turret
+research: eagle-turret

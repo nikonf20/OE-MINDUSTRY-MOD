@@ -1,0 +1,494 @@
+type: ItemTurret
+name: Sakura
+description:Charge a Sakura Bomb and fire it, dealing splash damage and spreading Sakura Shards
+health: 600
+size: 2
+targetGround: true
+targetAir: true
+reload: 360
+range: 210
+rotateSpeed: 6.4
+inaccuracy: 0
+recoil: 0.5
+recoilTime: 45
+cooldownTime: 180
+researchCostMultiplier: 0.2
+liquidCapacity: 20
+moveWhileCharging: false
+hasPower: true
+hasLiquid: true
+hasItem: true
+shootSound: laser
+consumes: {
+    power: 6.5
+    coolant: {
+    amount: 0.1
+    optional: true
+    }
+}
+shootY: 4
+ammoTypes: {
+        thorium: {
+            type: BasicBulletType
+            lifetime: 50
+            damage: 0
+            splashDamage: 180
+            splashDamageRadius: 50
+            speed: 8
+            width: 20
+            height: 20
+            sprite: large-bomb
+            spin: 6
+            drawSize: 20
+            shrinkX: -0.6
+            shrinkY: -0.6
+            frontColor: FFFFFF
+            backColor: FF8BDE
+            ammoMultiplier: 3
+            trailColor: FF8BDE
+            trailWidth: 5
+            trailLength: 24
+            homingRange: 50
+            homingDelay: 1.5
+            homingPower: 0.04
+            buildingDamageMultiplier: 0.5
+            drag: 0.03
+            hitSound: explosionbig
+            weaveScale: 4
+            weaveMag: 6
+            intervalBullets: 1
+            bulletInterval: 2
+            intervalBullet:  {
+                type: BasicBulletType
+                lifetime: 90
+                splashDamage: 10
+                splashDamageRadius: 20
+                speed: 1
+                width: 6
+                height: 6
+                drawSize: 2
+                shrinkX: 0
+                shrinkY: 0.3
+                frontColor: FFFFFF
+                backColor: FF8BDE
+                trailColor: FF8BDE
+                trailWidth: 2.5
+                trailLength: 15
+                weaveScale: 7
+                weaveMag: 2
+                buildingDamageMultiplier: 0.1
+                drag: 0.05
+                hitSound: none
+                despawnHit: true
+                hittable: false
+                collides: false
+        hitEffect:  {
+        type: MultiEffect
+            effects: [
+        {
+            type: ParticleEffect
+            particles: 3
+            sizeFrom: 1
+            sizeTo: 0
+            line: false
+            lifetime: 10
+            length: 2
+            baseLength: 2
+            colorTo: FF8BDE
+            colorFrom: FFFFFF
+        }
+        {
+            type: ParticleEffect
+            particles: 15
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: false
+            lifetime: 10
+            length: 10
+            baseLength: 5
+            colorTo: FFFFFF
+            colorFrom: FF8BDE
+            lightScl: 6
+            lightOpacity: 1.8
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 18
+            lifetime: 10
+            strokeFrom: 5
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: FF8BDE
+        }
+        {
+            type: ParticleEffect
+            particles: 5
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: false
+            lifetime: 60
+            length: 5
+            baseLength: 10
+            colorTo: FFFFFF
+            colorFrom: FF8BDE
+            lightScl: 6
+            lightOpacity: 1.8
+        }
+        ]
+    }
+            despawnEffect: none
+            }
+            fragLifeMin: 0.5
+            fragBullets: 20
+            fragBullet: {
+                type: BasicBulletType
+                lifetime: 90
+                splashDamage: 16
+                splashDamageRadius: 35
+                speed: 3
+                width: 12
+                height: 12
+                drawSize: 2
+                shrinkX: 0
+                shrinkY: 0.4
+                frontColor: FFFFFF
+                backColor: FF8BDE
+                trailColor: FF8BDE
+                trailWidth: 3
+                trailLength: 25
+                weaveScale: 8
+                weaveMag: 10
+                drag: 0.05
+                hitSound: explosion
+                hittable: false
+                collides: false
+                despawnHit: true
+        hitEffect:  {
+        type: MultiEffect
+            effects: [
+        {
+            type: ParticleEffect
+            particles: 3
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: false
+            lifetime: 60
+            length: 5
+            baseLength: 10
+            colorTo: FFFFFF
+            colorFrom: FF8BDE
+            lightScl: 6
+            lightOpacity: 1.8
+        }
+        {
+            type: ParticleEffect
+            particles: 3
+            sizeFrom: 1
+            sizeTo: 0
+            line: false
+            lifetime: 10
+            length: 2
+            baseLength: 2
+            colorTo: FF8BDE
+            colorFrom: FFFFFF
+        }
+        {
+            type: ParticleEffect
+            particles: 15
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: false
+            lifetime: 10
+            length: 10
+            baseLength: 5
+            colorTo: FFFFFF
+            colorFrom: FF8BDE
+            lightScl: 6
+            lightOpacity: 1.8
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 40
+            lifetime: 10
+            strokeFrom: 5
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: FF8BDE
+            }
+        ]
+    }
+            despawnEffect: none
+            }
+            despawnHit: true
+            chargeEffect: {
+            type:MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 0
+            sizeTo: 2
+            line: false
+            lifetime: 62
+            length: -30
+            baseLength: 30
+            colorTo: FFFFFF
+            colorFrom: FF8BDE
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 0
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 1
+            sizeTo: 2
+            line: false
+            lifetime: 52
+            length: -39
+            baseLength: 40
+            colorTo: FFFFFF
+            colorFrom: FFBBEC
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 10
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 0.5
+            sizeTo: 2
+            line: false
+            lifetime: 42
+            length: -48
+            baseLength: 50
+            colorTo: FFFFFF
+            colorFrom: FF84B9
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 20
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 1
+            sizeTo: 2
+            line: false
+            lifetime: 32
+            length: -57
+            baseLength: 60
+            colorTo: FFFFFF
+            colorFrom: FF84B9
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 30
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 1
+            sizeTo: 2
+            line: false
+            lifetime: 22
+            length: -66
+            baseLength: 70
+            colorTo: FFFFFF
+            colorFrom: FFFFFF
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 40
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 0
+            sizeTo: 2
+            line: false
+            lifetime: 12
+            length: -76
+            baseLength: 80
+            colorTo: FFFFFF
+            colorFrom: FF84B9
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 50
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 0
+            sizeTo: 1
+            line: false
+            lifetime: 2
+            length: -86
+            baseLength: 90
+            colorTo: FFFFFF
+            colorFrom: FF94FA
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 60
+            rotWithParent: true
+            }
+            {
+            type: WaveEffect
+            sizeFrom: 6
+            sizeTo: 10
+            lifetime: 62
+            strokeFrom: 2
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: FF8BDE00
+        }
+    ]
+}
+        hitEffect:  {
+        type: MultiEffect
+            effects: [
+        {
+            type: ParticleEffect
+            particles: 15
+            sizeFrom: 2
+            sizeTo: 0
+            line: false
+            lifetime: 120
+            length: 5
+            baseLength: 40
+            colorTo: FFFFFF
+            colorFrom: FF8BDE
+            lightScl: 6
+            lightOpacity: 1.8
+        }
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 2
+            sizeTo: 0
+            line: false
+            lifetime: 10
+            length: 5
+            baseLength: 5
+            colorTo: FF8BDE
+            colorFrom: FFFFFF
+        }
+        {
+            type: ParticleEffect
+            particles: 15
+            sizeFrom: 3
+            sizeTo: 0
+            line: false
+            lifetime: 10
+            length: 5
+            baseLength: 30
+            colorTo: FFFFFF
+            colorFrom: FF8BDE
+            lightScl: 6
+            lightOpacity: 1.8
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 70
+            lifetime: 10
+            strokeFrom: 15
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: FF8BDE
+            }
+        ]
+    }
+            despawnEffect: none
+        shootEffect: {
+        type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            lifetime: 10
+            particles: 20
+            colorFrom:FF8BDE
+            colorTo: FFFFFF
+            line: true
+            length: 60
+            lenFrom: 0
+            lenTo: 3
+            sizeFrom: 2.5
+            sizeTo: 0
+            strokeFrom: 5
+            strokeTo: 0
+            cone: 70
+            }
+        ]
+    }
+        smokeEffect: none
+    }
+}
+
+shoot: {
+    shots: 1
+    firstShotDelay: 60
+    }
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      type: RegionPart
+      suffix: -wing
+      mirror: true
+      under: true
+      outline: true
+      progress: warmup
+      moveX: 4.5
+      moveY: -2
+      moveRot: -35
+    }
+    {
+      type: RegionPart
+      suffix: -side
+      mirror: true
+      under: false
+      outline: true
+      progress: warmup
+      moveX: 2.5
+      moveY: -3
+      moveRot: -10
+      heatColor:  FF8400FF
+    }
+    {
+    type: RegionPart
+      suffix: -mid
+      mirror: false
+      under: false
+      outline: true
+      progress: recoil
+      moveX: 0
+      moveY: -5
+    }
+    {
+    type: RegionPart
+      suffix: -back
+      mirror: false
+      under: true
+      outline: true
+      progress: recoil
+      moveX: 0
+      moveY: -2
+      heatColor: FF840050
+    }
+    ]
+}
+
+requirements: [
+thorium/112
+silicon/95
+lead/124
+titanium/80
+]
+category: turret
+research: lancer

@@ -1,0 +1,36 @@
+type: fracker
+name: Impact Oil Drill
+description: Very Fast Pumping Oil. Useful For One For All. Better Than Oil Extractor 10x And Can Place On Any Terrian But Requires A lot Of Water
+health: 3500
+size: 5
+hasPower: false
+hasLiquids: true
+liquidCapacity: 1000
+hasItems: true
+attribute: oil
+result: oil
+pumpAmount: 2.5
+rotateSpeed: 12
+itemUseTime: 60
+researchCostMultiplier: 0.2
+consumes: {
+    power: 80
+    liquids: {
+        liquids: [
+        water/2.8
+        ]
+    }
+}
+requirements: [
+  stranth/242
+  thorium/300
+  plastanium/138
+  metaglass/162
+  silicon/155
+  graphite/215
+  lead/325
+]
+category: production
+research: oil-extractor
+ambientSound: drill
+ambientSoundVolume: 1.55

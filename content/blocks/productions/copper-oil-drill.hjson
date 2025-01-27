@@ -1,0 +1,30 @@
+type: fracker
+name: Copper Oil Drill
+description: Very Slowly Pumping Oil But Useful For Early Game And Can Place On Any Terrian
+health: 240
+size: 2
+hasPower: false
+hasLiquids: true
+liquidCapacity: 15
+hasItems: true
+attribute: oil
+result: oil
+pumpAmount: 0.0334
+itemUseTime: 180
+researchCostMultiplier: 0.2
+consumes: {
+    liquids: {
+        liquids: [
+        water/0.1
+        ]
+    }
+}
+requirements: [
+  copper/80
+  graphite/50
+  lead/50
+]
+category: production
+research: mechanical-drill
+ambientSound: drill
+ambientSoundVolume: 1.55

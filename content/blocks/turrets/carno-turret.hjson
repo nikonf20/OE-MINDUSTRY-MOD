@@ -1,0 +1,287 @@
+type: ItemTurret
+name: Carno
+description: Early Game Small Cannon, Shoot Explodesive Bullet
+health: 320
+size: 1
+targetGround: true
+targetAir: false
+reload: 120
+range: 150
+rotateSpeed: 6.4
+inaccuracy: 2
+recoil: 1
+researchCostMultiplier: 0.2
+liquidCapacity: 20
+hasLiquid: true
+hasItem: true
+shootSound: shootBig
+consumes: {
+    coolant: {
+    amount: 0.1
+    optional: true
+    }
+}
+shootY: 6
+maxAmmo: 30
+ammoPerShot: 5
+ammoTypes: {
+        copper: {
+        type: BasicBulletType
+        damage: 0
+        splashDamage: 22
+        splashDamageRadius: 15
+        speed: 8
+        width: 10
+        height: 15
+        bulletShrink: 0.5
+        collidesAir: false
+        frontColor: FFEEDB
+        backColor: FFBC70
+        lifetime: 18
+        knockback: 1.5
+        pierce: false
+        ammoMultiplier: 1
+        trailColor: FFBC70
+        trailEffect: none
+        trailWidth: 2
+        trailLength: 5
+        despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 12
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 18
+            baseLength: 4
+            colorTo: FFEEDB
+            colorFrom: FFBC70
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 15
+            lifetime: 15
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFEEDB
+            colorFrom: FFBC70
+            }
+        ]
+    }
+    
+shootEffect: {
+    lightScl: 1
+    lightOpacity: 0.3
+    length: 0
+    offset: 270
+    cone: 0
+    particles: 1
+    lifetime: 10
+    sizeFrom: 15
+    sizeTo: 0
+    colorTo: FFD7A8
+    colorFrom: FF6300
+    region: oe-shotgunshootspike
+    }
+
+smokeEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            lifetime: 15
+            length: 10
+            cone: 5
+            colorTo: FFC677
+            colorFrom: FFC677
+            sizeFrom: 1.5
+            sizeTo: 0
+        }
+    ]
+}
+}
+        silicon: {
+        type: BasicBulletType
+        damage: 0
+        splashDamage: 30
+        splashDamageRadius: 15
+        speed: 8
+        width: 10
+        height: 15
+        bulletShrink: 0.5
+        collidesAir: false
+        frontColor: FFB5B3
+        backColor: FF796A
+        lifetime: 18
+        knockback: 1.5
+        pierce: false
+        ammoMultiplier: 2
+        reloadMultiplier: 2.5
+        homingPower: 0.08
+        homingRange: 100
+        homingDelay: 1
+        inaccuracy: 30
+        trailColor: FFB5B3
+        trailEffect: none
+        trailWidth: 2
+        trailLength: 5
+        despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 14
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 15
+            baseLength: 5
+            colorTo: FFDDDD
+            colorFrom: FFB5B3
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 16
+            lifetime: 15
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFDDDD
+            colorFrom: FFB5B3
+            }
+        ]
+    }
+shootEffect: {
+    lightScl: 1
+    lightOpacity: 0.3
+    length: 0
+    offset: 270
+    cone: 0
+    particles: 1
+    lifetime: 10
+    sizeFrom: 20
+    sizeTo: 0
+    colorTo: FFDDDD
+    colorFrom: FFB5B3
+    region: oe-shotgunshootspike
+    }
+
+smokeEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            lifetime: 25
+            length: 15
+            cone: 5
+            colorTo: FFDDDD00
+            colorFrom: FFB5B3
+            sizeFrom: 2
+            sizeTo: 0
+        }
+    ]
+}
+}
+        thorium: {
+        type: BasicBulletType
+        damage: 0
+        splashDamage: 50
+        splashDamageRadius: 30
+        speed: 16
+        width: 10
+        height: 15
+        bulletShrink: 0.5
+        collidesAir: false
+        frontColor: FFD7FF
+        backColor: E876FF
+        lifetime: 9
+        knockback: 3
+        pierce: false
+        ammoMultiplier: 5
+        trailColor: E876FF
+        trailEffect: none
+        trailWidth: 2
+        trailLength: 5
+        despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 24
+            sizeFrom: 2
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 30
+            baseLength: 7
+            colorTo: FFD7FF
+            colorFrom: E876FF
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 28
+            lifetime: 15
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFD7FF
+            colorFrom: E876FF
+            }
+        ]
+    }
+shootEffect: {
+    lightScl: 1
+    lightOpacity: 0.3
+    length: 0
+    offset: 270
+    cone: 0
+    particles: 1
+    lifetime: 10
+    sizeFrom: 20
+    sizeTo: 0
+    colorTo: FFD7FF
+    colorFrom: E876FF
+    region: oe-shotgunshootspike
+    }
+smokeEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            lifetime: 25
+            length: 15
+            cone: 5
+            colorTo: FFD7FF00
+            colorFrom: E876FF
+            sizeFrom: 2
+            sizeTo: 0
+        }
+    ]
+}
+}
+}
+shoot: {
+    shots: 1
+    }
+
+requirements: [
+copper/50
+lead/50
+graphite/24
+]
+category: turret
+research: hail

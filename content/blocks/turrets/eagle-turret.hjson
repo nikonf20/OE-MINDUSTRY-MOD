@@ -1,0 +1,148 @@
+type: ItemTurret
+name: Eagle
+description: Early Sniper Turret Perfect For Far Enemies
+health: 200
+size: 1
+targetGround: true
+targetAir: true
+reload: 70
+range: 200
+rotateSpeed: 6.4
+inaccuracy: 1
+recoil: 1
+researchCostMultiplier: 0.2
+liquidCapacity: 20
+moveWhileCharging: false
+hasLiquid: true
+hasItem: true
+shootSound: pew
+consumes: {
+    coolant: {
+    amount: 0.1
+    optional: true
+    }
+}
+shootY: 4
+maxAmmo: 30
+ammoPerShot: 10
+ammoTypes: {
+            stranth: {
+            type: BasicBulletType
+            lifetime: 22
+            damage: 18
+            speed: 12
+            width:10
+            height: 10
+            bulletShrink: 0.1
+            frontColor: FFFFFF
+            backColor: FFFFFF
+            ammoMultiplier: 1
+            buildingDamageMultiplier: 0.8
+            trailColor: FFFFFF
+            trailWidth: 2
+            trailLength: 2
+            pierceCap: 3
+            pierce: true
+            pierceBuilding: true
+            despawnHit: true
+            chargeEffect: {
+            type:MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 0
+            sizeTo: 2
+            line: false
+            lifetime: 29
+            length: -10
+            baseLength: 10
+            colorTo: FFFFFF
+            colorFrom: FFFFFF00
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 11
+            sizeTo: 0
+            lifetime: 29
+            strokeFrom: 2
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: FFFFFF00
+        }
+    ]
+}
+        hitEffect: {
+            type: ParticleEffect
+            particles: 3
+            sizeFrom: 2
+            sizeTo: 0
+            line: false
+            lifetime: 30
+            length: 2
+            baseLength: 5
+            colorTo: FFFFFF
+            colorFrom: FFFFFF00
+        }
+            despawnEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 7
+            sizeFrom: 2
+            sizeTo: 0
+            line: false
+            lifetime: 15
+            length: 5
+            baseLength: 3
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 10
+            lifetime: 20
+            strokeFrom: 4
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF
+            }
+        ]
+    }
+        shootEffect: {
+        type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            lifetime: 10
+            particles: 12
+            colorFrom:FFFFFF
+            colorTo: FFFFFF00
+            line: true
+            length: 15
+            lenFrom: 0
+            lenTo: 3
+            sizeFrom: 2.5
+            sizeTo: 0
+            strokeFrom: 5
+            strokeTo: 0
+            cone: 20
+            }
+        ]
+    }
+        smokeEffect: none
+}
+}
+shoot: {
+    shots: 1
+    firstShotDelay: 30
+    }
+
+requirements: [
+stranth/50
+lead/50
+]
+category: turret
+research: duo
