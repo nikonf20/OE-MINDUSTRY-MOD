@@ -1,7 +1,0 @@
-name: "OE"
-displayName: Oil Extended
-author: "Atomic"
-description: Added new blocks that can interact with Oil and improve player quality of life
-
-version: "0.1"
-minGameVersion: "136"
