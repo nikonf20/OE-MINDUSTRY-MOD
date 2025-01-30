@@ -1,0 +1,7 @@
+type: floor
+name: Dry Grass Floor
+variants: 4
+attributes: {
+    water: -0.25
+}
+wall: dry-dirt-wall

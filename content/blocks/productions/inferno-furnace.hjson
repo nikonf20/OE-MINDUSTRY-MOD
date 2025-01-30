@@ -1,0 +1,100 @@
+type: GenericCrafter
+name: Inferno Furnace
+description: Create A Strong Material Comparable To Thorium By Melting Copper And Lead Together To Form Stranth
+health: 350
+size: 3
+hasPower: true
+hasLiquids: true
+liquidCapacity: 15
+hasItems: true
+itemCapacity: 20
+craftTime: 300
+heating: 0.01
+researchCostMultiplier: 0.2
+requirements: [
+  copper/50
+  lead/80
+  graphite/100
+]
+consumes: {
+    power: 10
+    items: {
+        items: [
+        copper/5
+        lead/5
+        ]
+    }
+    liquids: {
+        liquids: [
+        oil/0.2
+        ]
+    }
+}
+outputItems: [
+stranth/10
+]
+category: crafting
+research: graphite-press
+idleSound: respawning
+idleSoundVolume: 0.5
+update: true
+
+drawer: {
+    type: drawMulti
+    drawers: [
+    {
+    type: drawDefault
+    }
+    {
+    type:drawGlowRegion
+    suffix: "-glow"
+    color: FF5400
+    }
+    ]
+}
+undateEffectChance: 0.5
+updateEffect: {
+    type: particleEffect
+    particles: 10
+    colorFrom: FFFFFF20
+    colorTo: FFFFFF00
+    scaleFrom: 5
+    scaleTo: 0.2
+    lifetime: 200
+    length: 20
+}
+craftEffect: {
+    type: MultiEffect
+    effects: [
+    {
+    type: particleEffect
+    particles: 5
+    colorFrom: FF880050
+    colorTo: 1F000900
+    sizeFrom: 4
+    sizeTo: 6
+    lifetime: 100
+    length: 15
+    }
+    {
+    type: particleEffect
+    particles: 8
+    colorFrom: FFD200FF
+    colorTo: FF8800FF
+    sizeFrom: 1
+    sizeTo: 0
+    lifetime: 70
+    length: 40
+    }
+    {
+    type: particleEffect
+    particle: 20
+    colorFrom: FFFFFF20
+    colorTo: FFFFFF00
+    sizeFrom: 1
+    sizeTo: 6
+    lifetime: 200
+    length: 50
+    }
+]
+}

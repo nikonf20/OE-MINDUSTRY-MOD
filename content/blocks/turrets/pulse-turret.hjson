@@ -1,0 +1,115 @@
+type: PowerTurret
+name: Pulse
+description: Good For Beginning Of The Game. Dont Need Ammo For Shoot,Use Low Power And Easy to Destory.
+health: 220
+size: 1
+targetGround: true
+targetAir: true
+reload: 50
+range: 100
+rotateSpeed: 6.4
+inaccuracy: 2
+recoil: 1
+researchCostMultiplier: 0.2
+liquidCapacity: 20
+hasLiquid: true
+hasItem: false
+shootSound: pew
+consumes: {
+    power: 0.2
+    coolant: {
+    amount: 0.1
+    optional: true
+    }
+}
+shootType: {
+        type: BasicBulletType
+        damage: 12
+        speed: 6
+        width: 4
+        height: 5
+        bulletShrink: 0.5
+        frontColor: FFF9E9
+        backColor: FFF9E9
+        lifetime: 16
+        pierce: false
+        ammoMultiplier: 1
+        trailColor: FFF9E9
+        trailWidth: 1.5
+        trailLength: 4 
+        despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 8
+            length: 9
+            baseLength: 4
+            colorTo: FFF9E9
+            colorFrom: FFCC7A
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 7
+            lifetime: 7
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFF9E9
+            colorFrom: FFCC7A
+            }
+        ]
+    }
+    
+        shootEffect: {
+            lightScl: 1
+            lightOpacity: 0.3
+            length: 0
+            offset: 270
+            cone: 0
+            particles: 1
+            lifetime: 10
+            sizeFrom: 10
+            sizeTo: 0
+            colorTo: FFF9E9
+            colorFrom: FFCC7A
+            region: oe-shotgunshootspike
+            }
+        
+        smokeEffect: {
+            type: MultiEffect
+                effects: [
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    lifetime: 15
+                    length: 10
+                    cone: 5
+                    colorTo: FFF9E9
+                    colorFrom: FFCC7A
+                    sizeFrom: 1.5
+                    sizeTo: 0
+                }
+            ]
+        }
+}
+shoot: {
+    shots: 1
+    }
+
+requirements: [
+surge-alloy/23
+stranth/15
+silicon/30
+]
+category: turret
+research: [
+arc
+surge-alloy
+]

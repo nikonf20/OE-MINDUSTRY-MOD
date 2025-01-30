@@ -1,0 +1,160 @@
+type: ItemTurret
+name: Dragon Tear
+description: Make Slag Puddles On Ground, Be Careful It Can Be Friendly-Fire
+health: 900
+size: 3
+targetGround: true
+targetAir: false
+reload: 120
+range: 180
+rotateSpeed: 6.4
+recoil: 3
+researchCostMultiplier: 0.2
+liquidCapacity: 20
+hasLiquid: true
+hasItem: true
+shootSound: shootBig
+consumes: {
+    coolant: {
+    amount: 1
+    optional: true
+    }
+}
+shootY: 12
+maxAmmo: 30
+ammoPerShot: 5
+
+shootEffect: {
+    lightScl: 1
+    lightOpacity: 0.3
+    length: 0
+    offset: 270
+    cone: 0
+    particles: 1
+    lifetime: 10
+    sizeFrom: 30
+    sizeTo: 0
+    colorTo: FFAA75
+    colorFrom: FF6B0E
+    region: oe-shotgunshootspike
+    }
+
+smokeEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            lifetime: 15
+            length: 5
+            colorTo: FFAA75
+            colorFrom: FF6B0E
+            sizeFrom: 2
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            particles: 3
+            lifetime: 15
+            length: 5
+            colorTo: FFAA75
+            colorFrom: FF6B0E
+            sizeFrom: 4
+            sizeTo: 0.2
+        }
+    ]
+}
+
+ammoTypes: {
+        pyratite: {
+        type: BasicBulletType
+        damage: 50
+        speed: 10
+        width: 10
+        height: 15
+        bulletShrink: 0.5
+        frontColor: FFAA75
+        backColor: FF6B0E
+        lifetime: 18
+        knockback: 1.5
+        ammoMultiplier: 1
+        trailColor: FFAA75
+        trailWidth: 3
+        trailLength: 5
+        inaccuracy: 2
+        makeFire: true
+        puddles: 10
+        puddleRange: 3
+        puddleAmount: 50
+        puddleLiquid: slag
+        status: melting
+        statusDuration: 300
+        despawnHit: true
+        despawnEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 3
+            line: false
+            sizeFrom: 4
+            sizeTo: 0
+            lifetime: 15
+            length: 10
+            baseLength: 20
+            colorTo: FFAA75
+            colorFrom: FF6B0E
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 9
+            sizeTo: 0
+            lifetime: 10
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFAA75
+            colorFrom: FF6B0E
+            }
+        ]
+    }
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 4
+            sizeTo: 0
+            line: false
+            lifetime: 15
+            length: 10
+            baseLength: 20
+            colorTo: FFAA75
+            colorFrom: FF6B0E
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 3
+            sizeTo: 0
+            lifetime: 10
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFAA75
+            colorFrom: FF6B0E
+            }
+        ]
+    }
+}
+}
+shoot: {
+    shots: 3
+    }
+
+requirements: [
+titanium/50
+silicon/35
+stranth/120
+graphite/50
+]
+category: turret
+research: tsunami

@@ -1,0 +1,140 @@
+type: PowerTurret
+name: Neclo
+description: Early Game Power Turret. Consumes Power
+health: 220
+size: 1
+targetGround: true
+targetAir: true
+reload: 90
+range: 120
+rotateSpeed: 6.4
+inaccuracy: 5
+recoil: 0
+recoilTime: 5
+researchCostMultiplier: 0.4
+liquidCapacity: 20
+hasLiquid: true
+hasItem: false
+shootSound: lasershoot
+consumes: {
+    power: 3.5
+    coolant: {
+    amount: 0.1
+    optional: true
+    }
+}
+shootY: 2.7
+shootType: {
+        type: BasicBulletType
+        damage: 10
+        speed: 9
+        width: 8
+        height: 10
+        bulletShrink: 0.5
+        frontColor: FFFFFF
+        backColor: 9EFFF7
+        lifetime: 14
+        pierce: false
+        trailColor: 9EFFF7
+        trailWidth: 3
+        trailLength: 1
+        status: shocked
+        despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 8
+            length: 18
+            baseLength: 4
+            colorTo: FFFFFF
+            colorFrom: 9EFFF7
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 9
+            lifetime: 7
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: 9EFFF7
+            }
+        ]
+    }
+    
+        shootEffect: {
+            lightScl: 1
+            lightOpacity: 0.3
+            length: 0
+            offset: 270
+            cone: 0
+            particles: 1
+            lifetime: 10
+            sizeFrom: 5
+            sizeTo: 0
+            colorTo: FFFFFF
+            colorFrom: 9EFFF7
+            region: oe-shotgunshootspike
+            }
+        smokeEffect: {
+            type: MultiEffect
+                effects: [
+                {
+                    type: ParticleEffect
+                    particles: 6
+                    lifetime: 15
+                    length: 10
+                    cone: 5
+                    colorTo: FFFFFF
+                    colorFrom: 9EFFF7
+                    sizeFrom: 1.5
+                    sizeTo: 0
+                }
+            ]
+        }
+}
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+    type: RegionPart
+      suffix: -mid
+      mirror: false
+      under: false
+      outline: true
+      progress: recoil
+      moveX: 0
+      moveY: 0
+      moves: [
+      {
+      progress: recoil
+      y: -0.75
+      }
+      {
+      progress: warmup
+      y: -1
+      }
+      ]
+    }
+    ]
+}
+shoot: {
+    shots: 3
+    firstShotDelay: 12
+    shotDelay: 6
+    }
+
+requirements: [
+copper/52
+lead/48
+silicon/21
+]
+category: turret
+research: arc

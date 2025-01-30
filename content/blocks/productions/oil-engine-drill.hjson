@@ -1,0 +1,38 @@
+type: drill
+name: Oil Engine Drill
+description: Faster Than Pneumatic Drill, Need Oil For Fuel
+health: 240
+size: 2
+hasPower: false
+hasLiquids: true
+hasItems: true
+
+liquidCapacity: 20
+
+drillTime: 480
+heatColor: FF987C
+tier: 3
+hardnessDrillMultiplier: 2
+rotateSpeed: 2.5
+liquidBoostIntensity: 1.9
+consumes: {
+    liquid:{
+    liquid: oil
+    amount: 0.12
+    booster: false
+    optional: true
+    }
+}
+
+requirements: [
+  copper/23
+  graphite/15
+  silicon/10
+  lead/13
+  stranth/10
+]
+category: production
+research: pneumatic-drill
+researchCostMultiplier: 0.4
+idleSound: drill
+idleSoundVolume: 0.003

@@ -1,0 +1,17 @@
+type: Conveyor
+name: Strant Conveyor
+description: Transport item Forward, Faster Than Titanium Conveyor
+health: 85
+requirements: [
+  copper/1
+  lead/1
+  titanium/2
+  stranth/1
+]
+category: distribution
+speed: 0.16
+displayedSpeed: 20
+research: [
+titanium-conveyor
+stranth
+]

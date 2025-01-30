@@ -1,0 +1,34 @@
+type: liquidRouter
+name: Copper Liquid Tank
+size: 3
+solid: false
+health: 450
+researchCostMultiplier: 1
+requirements: [
+  copper/150
+]
+liquidPadding: 1
+liquidCapacity: 1000
+liquidPressure: 1
+category: liquid
+research: copper-liquid-bridge
+
+drawer: {
+    type: drawMulti
+    drawers: [
+    {
+    type: drawRegion
+    suffix: "-bottom"
+    }
+    {
+    type:drawLiquidTile
+    padLeft: -0.8
+    padRight: -0.8
+    padTop: -0.8
+    padBottom: -0.8
+    }
+    {
+    type: drawDefault
+    }
+    ]
+}

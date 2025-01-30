@@ -1,0 +1,241 @@
+type: ItemTurret
+name: Warden
+description: Long Range Artillery Turret, Useful For Attack Enemie Building and Units Pack, Long Reload Time
+health: 2100
+size: 3
+targetGround: true
+targetAir: false
+reload: 320
+range: 300
+rotateSpeed: 2.4
+inaccuracy: 2
+recoil: 2
+recoilTime: 5
+researchCostMultiplier: 0.2
+liquidCapacity: 20
+hasLiquid: true
+hasItem: true
+shootSound: shootBig
+
+consumes: {
+    coolant: {
+    amount: 0.1
+    optional: true
+    }
+}
+shootY: 12
+maxAmmo: 30
+ammoPerShot: 6
+ammoTypes: {
+graphite: {
+        type: ArtilleryBulletType
+        damage: 0
+        splashDamage: 72
+        splashDamageRadius: 40
+        speed: 8
+        width: 10
+        height: 15
+        bulletShrink: 0.5
+        collidesAir: false
+        frontColor: FFFFFF
+        backColor: FFA166
+        lifetime: 18
+        knockback: 3
+        pierce: false
+        collidesAir: false
+        ammoMultiplier: 1
+        trailColor: FFA166
+        trailEffect: none
+        trailWidth: 2
+        trailLength: 5
+        hitSound: explosion
+        despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 12
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 32
+            baseLength: 4
+            colorTo: FFA166
+            colorFrom: FFFFFF
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 20
+            lifetime: 10
+            strokeFrom: 6
+            strokeTo: 0
+            colorTo: FFA166
+            colorFrom: FFFFFF
+        }
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 4
+            sizeTo: 0
+            lifetime: 30
+            length: 30
+            baseLength: 5
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF50
+            lightOpacity: 0
+            lightScl: 0
+        }
+            ]
+            }
+        shootEffect: {
+            lightScl: 1
+            lightOpacity: 0.3
+            length: 0
+            offset: 270
+            cone: 0
+            particles: 1
+            lifetime: 10
+            sizeFrom: 15
+            sizeTo: 0
+            colorTo: FFA166
+            colorFrom: FFFFFF
+            region: oe-shotgunshootspike
+        }
+    
+    smokeEffect: {
+        type: MultiEffect
+            effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            lifetime: 15
+            length: 10
+            cone: 5
+            colorTo: FFA166
+            colorFrom: FFFFFF
+            sizeFrom: 1.5
+            sizeTo: 0
+        }
+    ]
+    }
+}
+        blast-compound: {
+        type: ArtilleryBulletType
+        damage: 0
+        splashDamage: 118
+        splashDamageRadius: 45
+        speed: 8
+        width: 10
+        height: 15
+        bulletShrink: 0.5
+        collidesAir: false
+        frontColor: FFFFFF
+        backColor: FF5E6D
+        lifetime: 18
+        knockback: 6
+        pierce: false
+        collidesAir: false
+        ammoMultiplier: 3
+        trailColor: FF5E6D
+        trailEffect: none
+        trailWidth: 2
+        trailLength: 5
+        status: blasted
+        hitSound: explosion
+        despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 12
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 41
+            baseLength: 4
+            colorTo: FF5E6D
+            colorFrom: FFFFFF
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 30
+            lifetime: 10
+            strokeFrom: 8
+            strokeTo: 0
+            colorTo: FF5E6D
+            colorFrom: FFFFFF
+        }
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 4
+            sizeTo: 0
+            line: true
+            lifetime: 15
+            length: 30
+            baseLength: 15
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF50
+            lightOpacity: 0
+            lightScl: 0
+        }
+        ]
+    }
+    
+shootEffect: {
+    lightScl: 1
+    lightOpacity: 0.3
+    length: 0
+    offset: 270
+    cone: 0
+    particles: 1
+    lifetime: 10
+    sizeFrom: 15
+    sizeTo: 0
+    colorTo: FF5E6D
+    colorFrom: FFFFFF
+    region: oe-shotgunshootspike
+    }
+
+smokeEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            lifetime: 15
+            length: 10
+            cone: 5
+            colorTo: FF5E6D
+            colorFrom: FFFFFF
+            sizeFrom: 1.5
+            sizeTo: 0
+        }
+    ]
+    }
+}
+}
+shoot: {
+    type: ShootAlternate
+    spread: 5
+    shotDelay: 10
+    shots: 6
+    barrels: 3
+    }
+
+requirements: [
+stranth/228
+silicon/177
+lead/172
+graphite/120
+]
+category: turret
+research: ripple

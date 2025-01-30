@@ -1,0 +1,24 @@
+type: fracker
+name: SprialWater Extractor
+description: Extract Groundwater. Slowly Extract. Useful In Early Game, Suitable For Use With Drills. Can Put On Any Surface.
+health: 110
+size: 1
+hasPower: false
+hasLiquids: true
+liquidCapacity: 10
+hasItems: true
+attribute: water
+result: water
+pumpAmount: 0.02
+rotateSpeed: 1.2
+itemUseTime: 60
+researchCostMultiplier: 0.4
+requirements: [
+  copper/59
+  lead/32
+  graphite/70
+]
+category: production
+research: pneumatic-drill
+ambientSound: drill
+ambientSoundVolume: 1.55

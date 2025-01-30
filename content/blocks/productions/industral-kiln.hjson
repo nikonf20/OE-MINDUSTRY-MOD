@@ -1,0 +1,94 @@
+type: GenericCrafter
+name: Industral Kiln
+description: Melting Sand And Lead To Product More Metaglass And Use Oil For Fuel
+health: 320
+size: 4
+hasPower: true
+hasLiquids: true
+liquidCapacity: 15
+hasItems: true
+itemCapacity: 20
+craftTime: 100
+
+researchCostMultiplier: 0.2
+requirements: [
+  copper/80
+  lead/180
+  titanium/90
+  silicon/140
+  metaglass/100
+  stranth/60
+]
+
+consumes: {
+    power: 4
+    items: {
+        items: [
+        sand/4
+        lead/4
+        ]
+    }
+    liquids: {
+        liquids: [
+        oil/0.2
+        ]
+    }
+}
+outputItems: [
+metaglass/8
+]
+category: crafting
+research: kiln
+idleSound: respawning
+idleSoundVolume: 0.5
+update: true
+
+drawer: {
+    type: drawMulti
+    drawers: [
+    {
+    type: drawDefault
+    }
+    {
+    type:drawGlowRegion
+    suffix: "-glow"
+    color: FFFFFF
+    }
+    ]
+}
+undateEffectChance: 0.3
+updateEffect: {
+    type: particleEffect
+    particles: 20
+    colorFrom: FFFFFF08
+    colorTo: FFFFFF00
+    scaleFrom: 9
+    scaleTo: 0.1
+    lifetime: 60
+    length: 10
+}
+craftEffect: {
+    type: MultiEffect
+    effects: [
+    {
+    type: particleEffect
+    particles: 20
+    colorFrom: FFFFFF30
+    colorTo: FF880000
+    sizeFrom: 2
+    sizeTo: 8
+    lifetime: 60
+    length: 13
+    }
+    {
+    type: particleEffect
+    particle: 20
+    colorFrom: FFFFFF20
+    colorTo: FF880000
+    sizeFrom: 2
+    sizeTo: 10
+    lifetime: 50
+    length: 15
+    }
+]
+}

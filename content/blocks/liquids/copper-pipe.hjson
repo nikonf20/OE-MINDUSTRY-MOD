@@ -1,0 +1,12 @@
+type: Conduit
+name: Copper Pipe
+leaks: true
+health: 75
+researchCostMultiplier: 0.1
+requirements: [
+  copper/3
+]
+liquidCapacity: 2.5
+liquidPressure: 1
+category: liquid
+research: copper-oil-drill

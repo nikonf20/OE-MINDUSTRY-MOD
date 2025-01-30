@@ -1,0 +1,33 @@
+type: OverdriveProjector
+size: 1
+name: Booster
+description: Early Game Booster Can Boost a Little Speed In Close Range
+health: 120
+range: 50
+phaseRangeBoost: 75
+speedBoost: 1.2
+speedBoostPhase: 1.55
+useTime: 300
+baseColor: FFA575
+hasBoost: true
+consumes: {
+  power: 1
+  items: {
+    items: [
+      titanium/1
+    ]
+    booster: true
+    optional: true
+  }
+}
+
+requirements: [
+  copper/92
+  lead/80
+  silicon/50
+]
+
+researchCostMultiplier: 0.3
+
+category: effect
+research: mender

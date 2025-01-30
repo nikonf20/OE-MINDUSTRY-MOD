@@ -1,0 +1,10 @@
+name: Diesel Oil
+description: Better Than Oil, Good For Diesel Machine, Very Flammable And Explodsive
+color:895841
+barColor: 895841
+explosiveness: 2
+flammability: 2
+heatCapacity: 0.4
+temperature: 0.5
+effect: tarred
+research: oil
