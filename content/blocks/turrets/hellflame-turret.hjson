@@ -10,7 +10,7 @@ range: 140
 shootCone: 80
 rotateSpeed: 4.5
 recoil: 0.5
-researchCostMultiplier: 0.2
+researchCostMultiplier: 0.4
 liquidCapacity: 20
 coolantMultiplier: 2
 consumes: {
