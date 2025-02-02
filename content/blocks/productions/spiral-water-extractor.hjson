@@ -16,7 +16,7 @@ researchCostMultiplier: 0.4
 requirements: [
   copper/59
   lead/32
-  graphite/70
+  graphite/25
 ]
 category: production
 research: pneumatic-drill
