@@ -9,7 +9,7 @@ reload: 60
 range: 130
 rotateSpeed: 6.4
 recoil: 3
-researchCostMultiplier: 0.3
+researchCostMultiplier: 1
 liquidCapacity: 20
 hasLiquid: true
 hasItem: true
