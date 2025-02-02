@@ -10,7 +10,7 @@ range: 150
 rotateSpeed: 6.4
 inaccuracy: 2
 recoil: 1
-researchCostMultiplier: 0.2
+researchCostMultiplier: 0.5
 liquidCapacity: 20
 hasLiquid: true
 hasItem: true
