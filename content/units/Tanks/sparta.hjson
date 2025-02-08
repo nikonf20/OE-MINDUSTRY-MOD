@@ -1,0 +1,158 @@
+
+type: tank
+name: Sparta
+description: IT JUST A TANK
+hitSize: 21
+singleTarget: false
+omniMovement: false
+rotateMoveFirst: true
+faceTarget: false
+health: 1500
+armor: 10
+speed: 0.45
+rotateSpeed: 2.4
+itemCapacity: 0
+treadRects: [
+    {
+    x:13
+    y:-22
+    height: 33
+    width: 19
+    treadFrames: 4
+    }
+]
+weapons: [
+    {
+    name: sparta-top
+    layerOffset: 2
+    x: 0
+    y: -3
+    shoot: {
+    shots: 1
+    }
+    shootSound: shootBig
+    reload: 180
+    recoil: 0
+    recoilTime: 32
+    rotate: true
+    rotateSpeed:1.1
+    mirror: false
+    shootCone: 2
+    inaccuracy: 2
+    shootY: 14
+    parts: [
+    {
+        type: RegionPart
+        mirror: false
+        suffix: -gun
+        under: false
+        layerOffset: -1
+        moveY: 0
+        progress: recoil
+        heatProgress: recoil
+        heatColor: FF7959
+        moves: [
+            {
+            progress: recoil
+            y: -4
+            }
+          ]
+        }
+      ]
+    bullet: {
+        type: ArtilleryBulletType
+        damage: 0
+        splashDamage: 132
+        splashDamageRadius: 45
+        speed: 8
+        width: 10
+        height: 15
+        bulletShrink: 0.5
+        collidesAir: false
+        frontColor: FFFFFF
+        backColor: FFA166
+        lifetime: 18
+        knockback: 3
+        pierce: false
+        collidesAir: false
+        ammoMultiplier: 1
+        trailColor: FFA166
+        trailEffect: none
+        trailWidth: 2
+        trailLength: 10
+        hitSound: explosion
+        despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 12
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 32
+            baseLength: 4
+            colorTo: FFA166
+            colorFrom: FFFFFF
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 48
+            lifetime: 8
+            strokeFrom: 20
+            strokeTo: 0
+            colorTo: FFA16600
+            colorFrom: FFFFFF
+        }
+        {
+            type: ParticleEffect
+            particles: 20
+            sizeFrom: 5
+            sizeTo: 0
+            lifetime: 80
+            length: 30
+            baseLength: 20
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF20
+            lightOpacity: 0
+            lightScl: 0
+        }
+            ]
+            }
+        shootEffect: {
+            lightScl: 1
+            lightOpacity: 0.3
+            length: 0
+            offset: 270
+            cone: 0
+            particles: 1
+            lifetime: 10
+            sizeFrom: 15
+            sizeTo: 0
+            colorTo: FFA166
+            colorFrom: FFFFFF
+            region: oe-shotgunshootspike
+        }
+        smokeEffect: {
+            type: MultiEffect
+                effects: [
+            {
+                type: ParticleEffect
+                particles: 6
+                lifetime: 15
+                length: 10
+                cone: 5
+                colorTo: FFA166
+                colorFrom: FFFFFF
+                sizeFrom: 1.5
+                sizeTo: 0
+                    }
+                ]
+            }
+        }
+    }
+]

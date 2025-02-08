@@ -1,0 +1,21 @@
+name: Micro
+description: Standart supplies drone. fast speed transport. can carry only 10 item per time
+flying: true
+type: tether
+hitSize: 6
+health: 120
+range: 0
+itemCapacity: 10
+speed: 4.2
+rotateSpeed: 12
+rotateShooting: false
+accel: 0.1
+drag: 0.2
+itemOffsetY: -6.5
+engineSize: 1.4
+engineOffset: 6
+defaultController: CargoAI
+isEnemy: false
+allowedInPayloads: false
+logicControllable: false
+playerControllable: false
