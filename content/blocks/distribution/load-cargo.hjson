@@ -13,7 +13,7 @@ hasLiquids: false
 buildTime: 300
 consumes:
     {
-        power: 3
+        power: 5
   }
 unitType: maco
 
