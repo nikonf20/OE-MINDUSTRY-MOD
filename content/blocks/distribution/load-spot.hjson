@@ -13,7 +13,7 @@ hasLiquids: false
 buildTime: 150
 consumes:
     {
-        power: 7
+        power: 2
   }
 unitType: micro
 
