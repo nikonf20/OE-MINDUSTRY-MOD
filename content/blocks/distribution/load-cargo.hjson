@@ -1,0 +1,28 @@
+type: UnitCargoLoader
+name: Cargo Loader
+description: Constructs cargo drones. Drones automatically distribute items to Unloading Points with a matching filter
+size: 2
+health: 200
+
+hasItems: true
+itemCapacity: 100
+separateItemCapacity: true
+
+hasPower: true
+hasLiquids: false
+buildTime: 300
+consumes:
+    {
+        power: 3
+  }
+unitType: maco
+
+category: distribution
+research: mass-driver
+requirements: [
+  lead/210
+  phase-fabric/90
+  titanium/178
+  silicon/122
+]
+researchCostMultiplier: 0.3

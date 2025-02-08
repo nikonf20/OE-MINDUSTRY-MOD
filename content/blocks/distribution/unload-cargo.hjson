@@ -1,0 +1,23 @@
+type: UnitCargoUnloadPoint
+name: Cargo Unloader
+description: Constructs cargo drones. Drones automatically distribute items to Unloading Points with a matching filter
+size: 2
+health: 180
+
+hasItems: true
+outputItem: true
+itemCapacity: 100
+separateItemCapacity: true
+
+hasPower: true
+hasLiquids: false
+buildTime: 110
+
+category: distribution
+research: load-cargo
+requirements: [
+  titanium/ 188
+  lead/192
+  silicon/105
+]
+researchCostMultiplier: 0.3

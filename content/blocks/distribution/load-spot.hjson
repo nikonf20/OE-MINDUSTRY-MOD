@@ -1,0 +1,33 @@
+type: UnitCargoLoader
+name: Spot Loader
+description: Constructs pickup spot. Drones automatically distribute items to Unloading Points with a matching filter
+size: 1
+health: 120
+
+hasItems: true
+itemCapacity: 100
+separateItemCapacity: true
+
+hasPower: true
+hasLiquids: false
+buildTime: 150
+consumes:
+    {
+        power: 7
+  }
+unitType: micro
+
+category: distribution
+research: mass-driver
+requirements: [
+  lead/90
+  phase-fabric/23
+  titanium/89
+  silicon/130
+]
+researchCostMultiplier: 0.3
+
+polySides: 6
+polyRadius: 4
+polyStroke: 0.9
+polyRotateSpeed: 1
