@@ -7,8 +7,10 @@ singleTarget: false
 omniMovement: false
 rotateMoveFirst: true
 faceTarget: false
-health: 1500
-armor: 10
+targetGround: true
+targetAir: false
+health: 700
+armor: 5
 speed: 0.45
 rotateSpeed: 2.4
 itemCapacity: 0
@@ -19,6 +21,21 @@ treadRects: [
     height: 33
     width: 19
     treadFrames: 4
+    }
+]
+abilities: [
+    {
+    type: ShieldArcAbility
+    max: 300
+    y: -11
+    x: 0
+    radius: 25
+    angle: 120
+    width: 5
+    regen: 0.1667
+    cooldown: 300
+    whenShooting: false
+    region: "oe-sparta-shield"
     }
 ]
 weapons: [
@@ -35,7 +52,7 @@ weapons: [
     recoil: 0
     recoilTime: 32
     rotate: true
-    rotateSpeed:1.1
+    rotateSpeed:3.5
     mirror: false
     shootCone: 2
     inaccuracy: 2
@@ -71,7 +88,7 @@ weapons: [
         collidesAir: false
         frontColor: FFFFFF
         backColor: FFA166
-        lifetime: 18
+        lifetime: 12
         knockback: 3
         pierce: false
         collidesAir: false
