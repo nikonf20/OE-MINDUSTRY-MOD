@@ -1,0 +1,98 @@
+type: GenericCrafter
+name: Raditor Oil Mixer
+description: Mixing conventional fuel with radioactive minerals creates a miraculous energy source.
+health: 420
+size: 2
+hasPower: true
+hasLiquids: true
+liquidCapacity: 100
+hasItems: false
+craftTime: 60
+heating: 0.1
+hotColor: 7DFFFF
+coolColor: FFFFFF00
+lightColor: E676FF
+
+researchCostMultiplier: 0.2
+requirements: [
+  titanium/90
+  silicon/40
+  thorium/20
+  stranth/50
+]
+consumes:{
+    power: 3
+    liquids: {
+        liquids: [
+        oil/0.1
+        ]
+    }
+    items: {
+        items: [
+        thorium/2
+        ]
+    }
+}
+coolantPower: 0.5
+outputLiquids: [
+raditor-oil/1
+]
+category: crafting
+research: cryofluid-mixer
+idleSound: respawning
+idleSoundVolume: 0.5
+update: true
+
+drawer: {
+    type: drawMulti
+    drawers: [
+    {
+    type: drawRegion
+    suffix: "-bottom"
+    }
+    {
+    type: drawLiquidTile
+    drawLiquid: oil
+    }
+    {
+    type: drawBubbles
+    color: 673572
+    }
+    {
+    type: drawRegion
+    suffix: "-rotator"
+    spinSprite: true
+    rotateSpeed: 2.5
+    }
+    {
+    type: drawRegion
+    suffix: "-rotator"
+    spinSprite: true
+    rotateSpeed: -2.5
+    }
+    {
+    type: drawLiquidTile
+    drawLiquid: raditor-oil
+    }
+    {
+    type: drawDefault
+    }
+    {
+    type:drawGlowRegion
+    suffix: "-rim"
+    color: E676FF
+    alpha: 1.2
+    }
+    ]
+}
+undateEffectChance: 0.8
+updateEffect: {
+        type: ParticleEffect
+        particles: 3
+        lifetime: 60
+        colorFrom: 8a5e94
+        colorTo: 8a5e9400
+        sizeInterp: pow2In
+        sizeFrom: 2
+        sizeTo: 0.4
+    }
