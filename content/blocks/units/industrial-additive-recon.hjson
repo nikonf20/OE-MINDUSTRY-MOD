@@ -1,0 +1,30 @@
+
+type: Reconstructor
+name: Industral Additive Reconstructor
+description: Upgrade inputted units from tier 1 to tier 2. And Upgrade some vanilla units
+size:3
+liquidCapacity: 80
+consumes: {
+    power: 4
+    items: [
+    stranth/50
+    silicon/30
+    ]
+    }
+upgrades:[
+    ["warrior","sparta"]
+    ["dagger","frostcape"]
+    ["nova","neove"]
+    ["crawler","syder"]
+    ["flare","blaze"]
+    ["mono","savle"]
+]
+constructTime: 900
+requirements: [
+stranth/100
+silicon/50
+graphite/40
+lead/70
+]
+category: units
+research: additive-reconstructor

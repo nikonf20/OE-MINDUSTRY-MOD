@@ -1,0 +1,28 @@
+
+type: UnitFactory
+name: Tank Factory
+health: 1400
+size: 3
+consumes: {
+    power: 1.2
+    }
+    plans: [
+    {
+    unit: warrior
+    time: 900
+    requirements: [
+        stranth/30
+        lead/30
+        silicon/15
+    ]
+    }
+]
+
+requirements: [
+stranth/100
+silicon/50
+graphite/40
+lead/70
+]
+category: units
+research: ground-factory
