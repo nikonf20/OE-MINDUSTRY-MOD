@@ -1,0 +1,59 @@
+name: raditor corroded
+show: true
+healthMultiplier: 0.75
+speedMultiplier: 0.75
+damage: 0.5
+color: 8a5e94
+applyColor: 8a5e94
+effectChance: 0.25
+affinities: [
+    wet
+]
+effect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 3
+            lifetime: 150
+            colorFrom: 8a5e94
+            colorTo: 8a5e9400
+            sizeInterp: pow3Out
+            sizeFrom: 2
+            sizeTo: 0.4
+        }
+        {
+            type: ParticleEffect
+            particles: 3
+            lifetime: 150
+            colorFrom: EFABFF
+            colorTo: EFABFF00
+            sizeInterp: pow3Out
+            sizeFrom: 0.7
+            sizeTo: 0.2
+        }
+    ]
+}
+applyEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 10
+            lifetime: 150
+            colorFrom: 8a5e94
+            colorTo: 8a5e9400
+            sizeFrom: 2
+            sizeTo: 0.4
+        }
+        {
+            type: ParticleEffect
+            particles: 10
+            lifetime: 150
+            colorFrom: BEA4C5
+            colorTo: BEA4C500
+            sizeFrom: 2
+            sizeTo: 0.4
+        }
+        ]
+    }
