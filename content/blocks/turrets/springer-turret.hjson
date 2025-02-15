@@ -41,7 +41,7 @@ ammoTypes: {
         status: wet
         statusDuration: 120
         knockback: 0.4
-        despawnHit: false
+        despawnHit: true
         }
         oil: {
         type: LiquidBulletType
@@ -52,7 +52,7 @@ ammoTypes: {
         status: tarred
         statusDuration: 120
         knockback: 0.1
-        despawnHit: false
+        despawnHit: true
         }
         slag: {
         type: LiquidBulletType
@@ -64,7 +64,7 @@ ammoTypes: {
         status: melting
         statusDuration: 120
         knockback: 0.2
-        despawnHit: false
+        despawnHit: true
         }
         cryofluid: {
         type: LiquidBulletType
@@ -75,7 +75,7 @@ ammoTypes: {
         status: freezing
         statusDuration: 120
         knockback: 0.1
-        despawnHit: false
+        despawnHit: true
         }
 }
 shoot: {
