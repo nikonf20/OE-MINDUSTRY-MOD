@@ -1,0 +1,53 @@
+type:CellLiquid
+name: Raditor Sludge
+description: It has a high level of radioactive value, is very dangerous, and is highly corrosive. Can slowly spread everywhere and faster with water and cause damage to structures.
+color:8a5e94
+barColor: 8a5e94
+explosiveness: 0
+flammability: 0
+heatCapacity: 5
+viscosity: 1.01
+lightColor: 8a5e9420
+temperature: 0.5
+capPuddles: false
+coolant: false
+moveThroughBlocks: true
+incinerable: false
+effect: raditor-corroded
+canStayOn: [
+    water
+    oil
+]
+vaporEffect:{
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 3
+            lifetime: 150
+            colorFrom: 8a5e94
+            colorTo: 8a5e9400
+            sizeInterp: pow3Out
+            sizeFrom: 3
+            sizeTo: 0.4
+        }
+        {
+            type: ParticleEffect
+            particles: 3
+            lifetime: 150
+            colorFrom: EFABFF
+            colorTo: EFABFF00
+            sizeInterp: pow3Out
+            sizeFrom: 1
+            sizeTo: 0.2
+        }
+    ]
+}
+
+colorFrom: 67466E
+colorTo: 46304B
+spreadTarget: water
+removeScaling: 1
+spreadDamage: 0.4
+spreadConversion: 0.5
+maxSpread: 1

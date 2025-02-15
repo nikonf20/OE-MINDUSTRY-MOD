@@ -1,0 +1,45 @@
+type:CellLiquid
+name: Raditor oil
+description: Provides a large amount of energy to specialized reactors and use as cooland
+color:E676FF
+barColor: E676FF
+lightColor: E676FF
+explosiveness: 0
+flammability: 0
+heatCapacity: 2.2
+viscosity: 0.45
+temperature: -0.1
+capPuddles: false
+coolant: true
+effect: raditor-corroded
+canStayOn: [
+    water
+]
+vaporEffect:{
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 3
+            lifetime: 150
+            colorFrom: 8a5e94
+            colorTo: 8a5e9400
+            sizeInterp: pow3Out
+            sizeFrom: 3
+            sizeTo: 0.4
+        }
+        {
+            type: ParticleEffect
+            particles: 3
+            lifetime: 150
+            colorFrom: EFABFF
+            colorTo: EFABFF00
+            sizeInterp: pow3Out
+            sizeFrom: 1
+            sizeTo: 0.2
+        }
+    ]
+}
+
+colorFrom: F1B4FF
+colorTo: F8DAFF
