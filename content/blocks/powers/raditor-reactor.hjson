@@ -1,0 +1,157 @@
+type: consumeGenerator
+name: Raditor reactor
+description: Product A lot of power. need to drain RADITOR SLUDGE out
+size: 4
+health: 1200
+hasLiquids: true
+liquidCapacity: 1000
+hasItems: false
+liquidDuration: 150
+powerProduction: 25
+researchCostMultiplier: 1.5
+requirements: [
+  thorium/150
+  graphite/200
+  silicon/110
+  stranth/100
+]
+research: thorium-reactor
+warmupSpeed: 60
+outputLiquid: {
+    liquid: raditor-sludge
+    amount: 0.8335
+    }
+consumes: {
+    liquid: {
+    liquid: raditor-oil
+    amount: 1.667
+    }
+}
+category: power
+research: thorium-reactor
+idleSound: respawning
+idleSoundVolume: 0.5
+
+generateEffectRnd: 0
+generateEffect: {
+    type: MultiEffect
+    effects: [
+        {
+        type:particleEffect
+        particles: 10
+        colorFrom: 8a5e94
+        colorTo: 8a5e9400
+        length: 10
+        lifetime: 100
+        sizeFrom: 3
+        sizeTo: 0.1
+        sizeInterp: pow3Out
+        interp: pow3Out
+        }
+        {
+        type:particleEffect
+        particles: 20
+        colorFrom: E676FF
+        colorTo: FFFFFF00
+        length: 15
+        lifetime: 100
+        sizeFrom: 2
+        sizeTo: 0
+        sizeInterp: pow3Out
+        interp: pow3Out
+        }
+    ]
+}
+drawer: {
+    type: drawMulti
+    drawers: [
+    {
+    type: drawRegion
+    suffix: "-bottom"
+    }
+    {
+    type: drawLiquidTile
+    drawLiquid: raditor-oil
+    }
+    {
+    type:drawCrucibleFlame
+    flameColor: E676FF40
+    midColor: F5C8FF40
+    flameRadius: 8
+    }
+    {
+    type: drawDefault
+    }
+    {
+    type:drawGlowRegion
+    suffix: "-rim"
+    color: E676FF40
+    }
+    ]
+}
+explodeOnFull: true
+explosionDamage: 150
+explosionRadius: 50
+explosionMinWarmup: 60
+explosionShake: 100
+explosionPuddleLiquid: raditor-sludge
+explosionPuddleAmount: 500
+explosionPuddleRange: 150
+explosionPuddles: 100
+destroyEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 30
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 10
+        length: 150
+        baseLength: 10
+        colorTo: FFFFFF00
+        colorFrom: E676FF
+        }
+        {
+        type: ParticleEffect
+        particles: 30
+        sizeFrom: 10
+        sizeTo: 2
+        line: false
+        lifetime: 120
+        length: 120
+        baseLength: 10
+        colorTo: FFFFFF00
+        colorFrom: 8a5e94
+        sizeInterp: pow3Out
+        interp: pow10Out
+        }
+        {
+        type: ParticleEffect
+        particles: 30
+        sizeFrom: 10
+        sizeTo: 0
+        line: false
+        lifetime: 100
+        length: 110
+        baseLength: 10
+        colorTo: FFFFFF00
+        colorFrom: E676FF
+        sizeInterp: pow3Out
+        interp: pow10Out
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 120
+        lifetime: 8
+        strokeFrom: 10
+        strokeTo: 0
+        lenFrom: 0
+        lenTo: 10
+        colorTo: FFFFFF
+        colorFrom: E676FF
+        }
+        ]
+    }
