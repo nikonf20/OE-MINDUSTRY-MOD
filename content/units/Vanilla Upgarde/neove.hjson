@@ -1,0 +1,129 @@
+name: Neove
+description: Upgraded Nova. homing bullet attack. Healing Team.
+type: mech
+hitSize: 10
+health: 550
+armour: 3
+itemCapacity: 0
+speed: 0.55
+singleTarget: false
+targetGround: true
+targetAir: true
+omniMovement: true
+rotateSpeed: 3
+rotateShooting: false
+accel: 0.2
+drag: 0.1
+shadowElevationScl: 0.7
+canBoost: true
+boostMultiplier: 1.3
+weapons:[
+    {
+    name:neove-weapon
+    x:4
+    y:1.75
+    shootSound: lasershoot
+    reload: 40
+    recoil: 2
+    recoilTime: 15
+    rotate: false
+    rotateSpeed: 0
+    mirror: true
+    alternate: true
+    top: false
+    inaccuracy: 35
+    shootY: 5
+    shoot: {
+    shots: 1
+    }
+    bullet: {
+        type:BasicBulletType
+        lifetime: 70
+        speed: 2
+        drag: -0.01
+        damage: 0
+        splashDamage: 30
+        splashDamageRadius: 50
+        healPercent: 0.05
+        drawSize: 10
+        frontColor: FFFFFF
+        backColor: 98FFA9
+        width: 10
+        height: 10
+        status: electrified
+        statusDuration: 300
+        trailEffect: none
+        trailColor: 98FFA9
+        trailWidth: 2
+        trailLength: 10
+        homingRange: 50
+        homingDelay: 30
+        homingPower: 0.06
+        weaveScale: 4
+        weaveMag: 4
+        hitSound: plasmaboom
+        spin: 22
+        despawnEffect: none
+        collidesTeam: true
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 9
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 15
+        length: 40
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: 98FFA9
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 30
+        lifetime: 8
+        strokeFrom: 5
+        strokeTo: 0
+        lenFrom: 0
+        lenTo: 10
+        colorTo: FFFFFF
+        colorFrom: 98FFA9
+        }
+        ]
+    }
+    shootEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 180
+            particles: 8
+            lifetime: 15
+            length: 20
+            colorTo: FFFFFF00
+            colorFrom: 98FFA9
+            sizeFrom: 1
+            sizeTo: 0.2
+            line: true
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 5
+        lifetime: 12
+        strokeFrom: 2
+        strokeTo: 0
+        lenFrom: 0
+        lenTo: 2
+        colorTo: FFFFFF
+        colorFrom: 98FFA9
+        }
+    ]
+    }
+    smokeEffect: none
+}
+}
+]

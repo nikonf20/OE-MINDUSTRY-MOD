@@ -1,0 +1,113 @@
+name: Blaze
+description: Upgraded Flare. Faster and Stronger.
+flying: true
+type: flying
+hitSize: 10
+health: 240
+armour: 1
+itemCapacity: 20
+speed: 2.8
+rotateSpeed: 6
+rotateShooting: true
+circleTarget: true
+faceTarget: true
+accel: 0.5
+drag: 0.01
+itemOffsetY: 5
+engineSize: 2.5
+engineOffset: 6
+controller: FlyingAI
+weapons:[
+    {
+    name:blaze-weapon
+    x:1.5
+    y:2
+    shootSound: pew
+    reload: 6
+    recoil: 2
+    recoilTime: 5
+    rotate: false
+    rotateSpeed: 0
+    mirror: true
+    alternate: true
+    top: false
+    layerOffset:-0.5
+    shootCone: 45
+    inaccuracy: 2
+    shootY: 3
+    shoot: {
+    shots: 1
+    }
+    bullet: {
+        type: BasicBulletType
+        damage: 11
+        speed: 8
+        width: 8
+        height: 10
+        bulletShrink: 0.5
+        collidesAir: true
+        frontColor: FFFFFF
+        backColor: FFDE9B
+        lifetime: 18
+        knockback: 1.5
+        pierce: false
+        ammoMultiplier: 1
+        despawnHit: true
+        despawnEffect: none
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 9
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 10
+        length: 9
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: FFDE9B
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 5
+        lifetime: 5
+        strokeFrom: 1.5
+        strokeTo: 0
+        colorTo: FFFFFF
+        colorFrom: FFDE9B
+        }
+        ]
+    }
+    shootEffect: {
+        type: ParticleEffect
+        particles: 6
+        lifetime: 10
+        length: 15
+        cone: 2
+        sizeFrom: 1.5
+        sizeTo: 0
+        colorTo: FFFFFF
+        colorFrom: FFDE9B
+        }
+    smokeEffect: {
+        type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 6
+            lifetime: 15
+            length: 10
+            cone: 5
+            colorTo: FFC677
+            colorFrom: FFC677
+            sizeFrom: 1.5
+            sizeTo: 0
+            }
+            ]
+        }
+    }
+}
+]

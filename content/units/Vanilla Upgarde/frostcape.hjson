@@ -1,0 +1,240 @@
+name: Frostcape
+description: Upgraded Dagger. Frost attack and immunity to freezing.
+type: mech
+hitSize: 10
+health: 750
+armour: 3
+itemCapacity: 0
+speed: 0.45
+singleTarget: false
+targetGround: true
+targetAir: true
+omniMovement: true
+rotateSpeed: 1.5
+rotateShooting: false
+accel: 0.2
+drag: 0.1
+shadowElevationScl: 0.7
+immunities: [
+    freezing
+]
+weapons:[
+    {
+    name:frostcape-main-weapon
+    x:6.5
+    y:0
+    shootSound: flame
+    reload: 24
+    recoil: 2
+    recoilTime: 10
+    cooldownTime: 100
+    rotate: false
+    rotateSpeed: 0
+    mirror: true
+    alternate: true
+    top: false
+    inaccuracy: 7
+    shootCone: 180
+    shootY: 7
+    shoot: {
+    shots: 1
+    }
+    bullet: {
+        type:BulletType
+        lifetime: 3.5
+        speed: 15
+        damage: 22
+        hittable: false
+        absorbable: false
+        pierce: true
+        pierceBuilding: true
+        status: freezing
+        statusDuration: 300
+        despawnEffect: none
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 4
+            sizeFrom: 3
+            sizeTo: 0
+            lifetime: 40
+            length: 7
+            baseLength: 8
+            colorTo: FFFFFF00
+            colorFrom: 00FAFF
+        }
+        {
+            type: ParticleEffect
+            particles: 4
+            sizeFrom: 2
+            sizeTo: 0
+            lifetime: 15
+            length: 5
+            baseLength: 5
+            colorTo: FFFFFF00
+            colorFrom: 88FFFC
+            
+            }
+        ]
+    }
+    shootEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 8
+            lifetime: 15
+            length: 80
+            colorTo: AFFDFF
+            colorFrom: 00E1FF
+            sizeFrom: 1
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 5
+            lifetime: 25
+            length: 75
+            colorTo: FFFFFF
+            colorFrom: 00FAFF
+            sizeFrom: 2
+            sizeTo: 0.2
+        }
+    ]
+}
+
+    smokeEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 6
+            lifetime: 35
+            length: 80
+            colorTo: FFFFFF00
+            colorFrom: BBFBFF
+            sizeFrom: 2.5
+            sizeTo: 0.2
+            }
+            {
+            type: ParticleEffect
+            cone: 7
+            particles: 8
+            lifetime: 15
+            length: 85
+            colorFrom: 00FFFF
+            colorTo: 74FFF200
+            sizeFrom: 1.5
+            sizeTo: 0.2
+            }
+            {
+            type: ParticleEffect
+            cone: 7
+            particles: 7
+            lifetime: 60
+            length: 90
+            colorFrom: 00F6FF
+            colorTo: FFFFFF00
+            sizeFrom: 2
+            sizeTo: 0.4
+            }
+            ]
+        }
+    }
+}
+{
+    name:frostcape-side-weapon
+    x:2.5
+    y:-3
+    shootSound: pew
+    reload: 18
+    recoil: 2
+    recoilTime: 5
+    cooldownTime: 30
+    rotate: true
+    rotateSpeed: 3
+    mirror: true
+    alternate: true
+    top: true
+    inaccuracy: 2
+    shootY: 3
+    shoot: {
+    shots: 1
+    }
+    bullet: {
+        type: BasicBulletType
+        damage: 12
+        speed: 6
+        width: 6
+        height: 14
+        bulletShrink: 0.5
+        collidesAir: true
+        frontColor: FFFFFF
+        backColor: A1FFF9
+        lifetime: 24
+        pierce: false
+        ammoMultiplier: 1
+        despawnHit: true
+        despawnEffect: none
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 9
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 10
+        length: 9
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: 00E8FF
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 5
+        lifetime: 5
+        strokeFrom: 1.5
+        strokeTo: 0
+        colorTo: FFFFFF
+        colorFrom: 9BFFF6
+        }
+        ]
+    }
+    shootEffect: {
+        type: ParticleEffect
+        particles: 6
+        lifetime: 10
+        length: 15
+        cone: 2
+        sizeFrom: 1.5
+        sizeTo: 0
+        colorTo: FFFFFF
+        colorFrom: A0FFFC
+        }
+    smokeEffect: {
+        type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 6
+            lifetime: 15
+            length: 10
+            cone: 5
+            colorTo: FFFFFF00
+            colorFrom: 00F6FF
+            sizeFrom: 1.5
+            sizeTo: 0
+            }
+            ]
+        }
+    }
+}
+]

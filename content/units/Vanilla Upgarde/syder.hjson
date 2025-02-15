@@ -1,0 +1,172 @@
+name: Syder
+description: Upgraded Crawler. Active circle shield When Charging. Relesses lightning around.
+type: mech
+hitSize: 10
+health: 500
+armour: 3
+itemCapacity: 0
+speed: 1.2
+singleTarget: false
+targetGround: true
+targetAir: true
+omniMovement: true
+controller: SuicideAI
+rotateSpeed: 3
+rotateShooting: false
+accel: 0.8
+drag: 0.8
+shadowElevationScl: 0.7
+abilities: [
+    {
+    type: ForceFieldAbility
+    cooldown: 180
+    sides: 1
+    max: 500
+    regen: 0.3334
+    radius: 10
+    }
+]
+weapons:[
+    {
+    name: charging-core
+    x:0
+    y:0
+    shootSound: none
+    chargeSound: plasmadrop
+    shootStatus: unmoving
+    shootStatusDuration: 310
+    reload: 300
+    shootCone: 180
+    mirror: false
+    shootY: 0
+    shoot: {
+    shots: 1
+    firstShotDelay: 300
+    }
+    bullet: {
+        type:BombBulletType
+        lifetime: 0
+        speed: 0
+        damage: 0
+        splashDamage: 180
+        splashDamageRadius: 80
+        buildingDamageMultiplier: 4
+        hitShake: 10
+        hitSound: plasmaboom
+        status: sapped
+        rangeOverride: 20
+        statusDuration: 300
+        killShooter: true
+        pierce: true
+        pierceBuilding: true
+        fragBullets: 10
+        fragSpread:36
+        fragRandomSpread: 0
+            fragBullet: {
+                type: LightningBulletType
+                damage: 30
+                lightningColor: FFE560
+                lightningLength: 20
+            }
+        range: 40
+        despawnEffect: none
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 7
+            sizeFrom: 6
+            sizeTo: 0
+            lifetime: 50
+            length: 7
+            baseLength: 10
+            cone: 360
+            colorTo: FFFFFF00
+            colorFrom: FFDFA6
+        }
+        {
+            type: ParticleEffect
+            particles: 8
+            sizeFrom: 2
+            sizeTo: 0
+            lifetime: 20
+            length: 5
+            cone: 360
+            baseLength: 5
+            colorTo: FFFFFF00
+            colorFrom: 88FFFC
+            }
+        ]
+    }
+    shootEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 360
+            particles: 8
+            lifetime: 20
+            length: 80
+            colorTo: FFFFFF
+            colorFrom: FFDA7B
+            lenFrom: 18
+            lenTo: 0
+            line: true
+        }
+        {
+            type: ParticleEffect
+            cone: 360
+            particles: 8
+            lifetime: 25
+            length: 80
+            colorTo: FFFFFF
+            colorFrom: FFBF00
+            lenFrom: 10
+            lenTo: 0
+            line: true
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 80
+            lifetime: 5
+            strokeFrom: 50
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: FFAD00
+        }
+    ]
+}
+chargeEffect: {
+            type:MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 1
+            sizeFrom: 0
+            sizeTo: 8
+            line: false
+            lifetime: 300
+            length: 0
+            baseLength: 0
+            colorTo: FFFFFF
+            colorFrom: FFAD00
+            followParent: true
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 6
+            sizeTo: 15
+            lifetime: 300
+            strokeFrom: 2
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: FFAD00
+            followParent: true
+        }
+    ]
+}
+}
+}
+]
