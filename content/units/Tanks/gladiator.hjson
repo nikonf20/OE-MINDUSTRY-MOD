@@ -1,0 +1,311 @@
+
+type: tank
+name: Gladiator
+description: IT JUST A TANK BOI
+hitSize: 36
+singleTarget: false
+omniMovement: false
+rotateMoveFirst: true
+faceTarget: false
+targetAir: false
+targetGround: true
+health: 1750
+armor: 10
+speed: 0.35
+rotateSpeed: 1.2
+itemCapacity: 0
+immunities: [
+    burning
+    melting
+]
+treadRects: [
+    {
+    x:31
+    y:-31
+    height: 70
+    width: 26
+    }
+    {
+    x:1
+    y:46
+    height: 24
+    width: 26
+    }
+]
+weapons: [
+    {
+    name: gladiator-top
+    layerOffset: 2
+    x: 0
+    y: -5
+    shoot: {
+    shots: 1
+    }
+    shootSound: largeCannon
+    reload: 180
+    recoil: 0
+    recoilTime: 32
+    rotate: true
+    rotateSpeed:1.1
+    mirror: false
+    alternate: false
+    shootCone: 2
+    inaccuracy: 2
+    shootY: 16
+    parts: [
+    {
+        type: RegionPart
+        mirror: false
+        suffix: -gun
+        under: false
+        layerOffset: -1
+        moveY: 0
+        progress: recoil
+        heatProgress: recoil
+        heatColor: FF7959
+        moves: [
+            {
+            progress: recoil
+            y: -4
+            }
+          ]
+        }
+      ]
+    bullet: {
+        type: BasicBulletType
+        damage: 0
+        splashDamage: 92
+        splashDamageRadius: 51
+        speed: 6.5
+        width: 10
+        height: 15
+        bulletShrink: 0.5
+        collidesAir: false
+        frontColor: FFFFFF
+        backColor: FFA166
+        lifetime: 30
+        knockback: 3
+        pierce: false
+        collidesAir: false
+        ammoMultiplier: 1
+        trailColor: FFA166
+        trailEffect: none
+        trailWidth: 2
+        trailLength: 10
+        hitSound: explosion
+        despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 12
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 42
+            baseLength: 4
+            colorTo: FFA166
+            colorFrom: FFFFFF
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 58
+            lifetime: 8
+            strokeFrom: 20
+            strokeTo: 0
+            colorTo: FFA16600
+            colorFrom: FFFFFF
+        }
+        {
+            type: ParticleEffect
+            particles: 30
+            sizeFrom: 8
+            sizeTo: 0
+            lifetime: 80
+            length: 40
+            baseLength: 30
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF20
+            lightOpacity: 0
+            lightScl: 0
+        }
+            ]
+            }
+        shootEffect: {
+            lightScl: 1
+            lightOpacity: 0.3
+            length: 0
+            offset: 270
+            cone: 0
+            particles: 1
+            lifetime: 10
+            sizeFrom: 30
+            sizeTo: 0
+            colorTo: FFA166
+            colorFrom: FFFFFF
+            region: oe-shotgunshootspike
+        }
+        smokeEffect: {
+            type: MultiEffect
+                effects: [
+            {
+                type: ParticleEffect
+                particles: 6
+                lifetime: 15
+                length: 20
+                cone: 10
+                colorTo: FFA166
+                colorFrom: FFFFFF
+                sizeFrom: 3
+                sizeTo: 0
+                    }
+                ]
+            }
+            fragBullets: 10
+            fragSpread: 10
+            fragSpreadRandom: 0
+            fragBullet: {
+                type: ShrapnelBulletType
+                damage: 22
+                width: 5
+                length: 45
+                toColor: FFA166
+                serrations: 0
+            }
+        }
+    }
+    {
+    name: gladiator-top2
+    layerOffset: 0.5
+    x: 9
+    y: 6.5
+    shoot: {
+    shots: 1
+    }
+    shootSound: flame
+    reload: 4
+    recoil: 1
+    recoilTime: 5
+    rotate: true
+    rotateSpeed:5
+    mirror: true
+    alternate: true
+    shootCone: 2
+    inaccuracy: 2
+    shootY: 5
+    bullet: {
+        type:BulletType
+        lifetime: 4
+        speed: 10
+        damage: 15
+        hittable: false
+        absorbable: false
+        ammoMultiplier: 2
+        pierce: true
+        pierceBuilding: true
+        makeFire: true
+        status: melting
+        statusDuration: 120
+        inaccuracy: 7
+        despawnEffect: none
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 2
+            sizeTo: 0
+            lifetime: 40
+            length: 7
+            baseLength: 20
+            colorTo: 4B0011
+            colorFrom: FFB266
+        }
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 1
+            sizeTo: 0
+            lifetime: 15
+            length: 5
+            baseLength: 20
+            colorTo: FFAA75
+            colorFrom: FF6B0E
+            
+            }
+        ]
+    }
+    shootEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 6
+            lifetime: 10
+            length: 65
+            colorTo: FFAA75
+            colorFrom: FFFFFF
+            sizeFrom: 1.2
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 3
+            lifetime: 30
+            length: 75
+            colorTo: FFD7D3
+            colorFrom: FFCD86
+            sizeFrom: 2
+            sizeTo: 0.2
+        }
+    ]
+}
+
+    smokeEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 6
+            lifetime: 20
+            length: 65
+            colorTo: FFAA75
+            colorFrom: FF6B0E
+            sizeFrom: 2.3
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 3
+            lifetime: 30
+            length: 50
+            colorFrom: FFF1BD
+            colorTo: FF6B0E
+            sizeFrom: 3
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 3
+            lifetime: 10
+            length: 60
+            colorFrom: FFF1BD
+            colorTo: CFCFCF20
+            sizeFrom: 1
+            sizeTo: 0.4
+        }
+    ]
+}
+}
+}
+]
