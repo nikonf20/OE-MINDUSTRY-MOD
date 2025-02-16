@@ -4,7 +4,7 @@ description: Product A lot of power. need to drain RADITOR SLUDGE out
 size: 4
 health: 1200
 hasLiquids: true
-liquidCapacity: 1000
+liquidCapacity: 500
 hasItems: false
 liquidDuration: 150
 powerProduction: 45
