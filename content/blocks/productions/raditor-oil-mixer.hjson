@@ -35,7 +35,7 @@ consumes:{
 }
 coolantPower: 0.5
 outputLiquids: [
-raditor-oil/1
+raditor-oil/0.1
 ]
 category: crafting
 research: cryofluid-mixer
