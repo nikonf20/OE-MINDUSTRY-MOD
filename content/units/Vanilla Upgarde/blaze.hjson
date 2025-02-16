@@ -4,7 +4,7 @@ flying: true
 type: flying
 hitSize: 10
 health: 240
-armour: 1
+armor: 1
 itemCapacity: 20
 speed: 2.8
 rotateSpeed: 6
