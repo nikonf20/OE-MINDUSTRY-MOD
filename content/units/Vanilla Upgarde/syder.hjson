@@ -3,7 +3,7 @@ description: Upgraded Crawler. Active circle shield When Charging. Relesses ligh
 type: mech
 hitSize: 10
 health: 500
-armour: 3
+armor: 3
 itemCapacity: 0
 speed: 1.2
 singleTarget: false
