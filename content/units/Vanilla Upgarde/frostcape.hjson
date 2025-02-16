@@ -3,7 +3,7 @@ description: Upgraded Dagger. Frost attack and immunity to freezing.
 type: mech
 hitSize: 10
 health: 750
-armour: 3
+armor: 3
 itemCapacity: 0
 speed: 0.45
 singleTarget: false
