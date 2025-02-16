@@ -3,7 +3,7 @@ description: Upgraded Nova. homing bullet attack. Healing Team.
 type: mech
 hitSize: 10
 health: 550
-armour: 3
+armor: 3
 itemCapacity: 0
 speed: 0.55
 singleTarget: false
