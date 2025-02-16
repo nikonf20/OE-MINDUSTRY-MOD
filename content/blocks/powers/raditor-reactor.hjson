@@ -7,7 +7,7 @@ hasLiquids: true
 liquidCapacity: 1000
 hasItems: false
 liquidDuration: 150
-powerProduction: 25
+powerProduction: 45
 researchCostMultiplier: 1.5
 requirements: [
   thorium/150
@@ -19,12 +19,12 @@ research: thorium-reactor
 warmupSpeed: 60
 outputLiquid: {
     liquid: raditor-sludge
-    amount: 0.8335
+    amount: 0.08335
     }
 consumes: {
     liquid: {
     liquid: raditor-oil
-    amount: 1.667
+    amount: 0.1667
     }
 }
 category: power
